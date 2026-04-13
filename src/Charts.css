@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #050505;
+  --panel: #111111;
+  --panel-2: #171717;
+  --panel-3: #1d1d1d;
+  --text: #ffffff;
+  --muted: #b1b1b1;
+  --border: #ff3131;
+  --red: #ff3131;
+  --red-dark: #d92727;
+  --red-soft: rgba(255, 49, 49, 0.12);
+  --red-glow: rgba(255, 49, 49, 0.18);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --transition: 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.charts-page {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 24px 16px 40px;
+}
+
+.charts-shell {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.charts-title {
+  margin: 0 0 22px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+/* TOP TAB BUTTONS */
+.charts-subtabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.charts-tab-btn {
+  min-width: 110px;
+  padding: 11px 18px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.charts-tab-btn:hover {
+  background: var(--red-soft);
+  transform: translateY(-1px);
+}
+
+.charts-tab-btn.active {
+  background: var(--red);
+  border-color: var(--red);
+  color: #ffffff;
+}
+
+/* FILTER CONTROLS */
+.charts-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.charts-select,
+.charts-input {
+  background: #0d0d0d;
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 14px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.charts-select {
+  appearance: none;
+  padding-right: 40px;
+  min-width: 120px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #ffffff 50%),
+    linear-gradient(135deg, #ffffff 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 3px),
+    calc(100% - 12px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.charts-select:focus,
+.charts-input:focus {
+  box-shadow: 0 0 0 3px var(--red-glow);
+}
+
+.charts-range {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* CHART CARD */
+.charts-card {
+  width: 100%;
+  background: var(--panel);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.charts-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 49, 49, 0.22);
+}
+
+.charts-card-label {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.charts-card-meta {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.charts-area {
+  width: 100%;
+  height: 320px;
+}
+
+/* TOOLTIP */
+.chart-tooltip {
+  background: #151515;
+  border: 1px solid rgba(255, 49, 49, 0.45);
+  border-radius: 10px;
+  padding: 10px 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.chart-tooltip-label {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.chart-tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .charts-title {
+    font-size: 26px;
+  }
+
+  .charts-subtabs,
+  .charts-controls,
+  .charts-range {
+    justify-content: center;
+  }
+
+  .charts-card {
+    padding: 14px;
+  }
+
+  .charts-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .charts-area {
+    height: 260px;
+  }
+
+  .charts-select,
+  .charts-input {
+    width: 100%;
+    max-width: 280px;
+  }
+}
