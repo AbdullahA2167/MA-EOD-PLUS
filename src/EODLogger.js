@@ -249,7 +249,7 @@ function App() {
                         type="checkbox"
                         onChange={() => toggleFlag(repIndex, custIndex, 'hadMCBefore')}
                       />
-                      Had MC Before
+                      Existing MC
                     </label>
 
                     <label className="check-label">
@@ -257,7 +257,7 @@ function App() {
                         type="checkbox"
                         onChange={() => toggleFlag(repIndex, custIndex, 'hadAAL')}
                       />
-                      AAL Done
+                      AAL
                     </label>
                   </div>
 
