@@ -80,7 +80,7 @@ select option {
   margin: 0 auto;
 }
 
-/* ✅ SAVE NOTIFICATION ONLY */
+
 .save-popup {
   position: fixed;
   top: 18px;
@@ -114,7 +114,7 @@ select option {
   }
 }
 
-/* TOP NAV */
+
 .top-tabs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -148,7 +148,7 @@ select option {
   border-color: var(--red);
 }
 
-/* MAIN CARD */
+
 .rep-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0)), var(--panel);
   border: 1.5px solid var(--border);
@@ -193,7 +193,7 @@ select option {
   box-shadow: 0 0 0 3px var(--red-glow);
 }
 
-/* MAIN BUTTONS */
+
 .add-customer-btn,
 .display-btn {
   width: 100%;
@@ -215,7 +215,7 @@ select option {
   transform: translateY(-1px);
 }
 
-/* CUSTOMER CARD */
+
 .customer-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0));
   background-color: var(--panel-2);
@@ -242,7 +242,7 @@ select option {
   gap: 14px;
 }
 
-/* FLAGS ROW */
+
 .flags-row {
   width: 100%;
   display: flex;
@@ -318,7 +318,7 @@ select option {
   box-shadow: 0 0 0 3px rgba(255, 49, 49, 0.2);
 }
 
-/* TYPE BUTTONS */
+
 .type-buttons {
   width: 100%;
   display: flex;
@@ -354,7 +354,7 @@ select option {
   box-shadow: 0 8px 18px rgba(255, 49, 49, 0.18);
 }
 
-/* PRODUCT AREA */
+
 .type-section {
   margin-top: 10px;
 }
@@ -423,7 +423,7 @@ select option {
   color: #ffffff;
 }
 
-/* DP DROPDOWNS */
+
 .dp-row {
   margin-top: 16px;
   display: flex;
@@ -478,7 +478,7 @@ select option {
   background-color: #101010;
 }
 
-/* SUMMARY */
+
 .display-btn {
   margin-top: 8px;
 }
@@ -540,7 +540,6 @@ select option {
   padding: 12px 22px;
 }
 
-/* SCROLLBAR */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -559,7 +558,6 @@ select option {
   background: rgba(255, 49, 49, 0.75);
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
   .top-tabs {
     grid-template-columns: repeat(2, 1fr);
